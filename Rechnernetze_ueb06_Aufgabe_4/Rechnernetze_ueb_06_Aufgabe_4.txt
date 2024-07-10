@@ -1,0 +1,14 @@
+Algotrithmus in Worten:
+1. Initialisierung: Jeder Router kennt seine Kosten zum Nachbarn.
+2. Regelmäßiger Austausch: Jeder Router sendet regelmäßig seinen Distanzvektor an alle Nachbarn.
+3. Aktualisierung: Ein Router aktualisiert seine Routingtabelle basierend auf den Empfangenden Vektoren:
+	- Für jeden Eintrag im Empfangenen Vektor: 1. Addiere die Kosten zum Nachbarn, 2. Wenn neue Kosten
+	  niedriger sind als die aktuellen aktualisiere die Routingtablelle.
+4. Wiederholung: Schritte 2 und 3 werden Regelmäßig wiederholt.
+
+Unterschiede zum Link-State-Verfahren:
+
+-Jeder Router kenn nur dieKostenzu seinen direkten Nachbarn.
+-Router tauschen nur Distanzvektoren mit direktem Nachbarn aus.
+-Updates propagieren langsam durch das Netzwerk.
+

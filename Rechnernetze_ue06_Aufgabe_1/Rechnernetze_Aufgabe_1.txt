@@ -1,0 +1,32 @@
+TCP Tahoe:
+
+TCP Tahoe ist ein früheres TCP Protokoll, das Mechanismen gegen ein Überlast-Ereignis verhindern sollen.
+Es funktioniert indem es mit einem Slow Start zuerst mit einer niedrigen Übertragungsrate beginnt und diese
+exponentiell erhöht bis es zu Packetverlusten kommt. Dann nachdem es zu einem Packetverlust gekommen ist, reduziert
+der Sender seine Übertragungsrate drastisch und erhöht sie linear. Dannach wird bei Empfang von drei duplizierten ACKs
+das vermisste Packet neu übertragen.
+
+TCP Reho:
+
+TCP Reho funktioniert ähnlich wie TCP Tahoe, mit ein paar Verbesserungen.
+Es hat wie TCP Tahoe einen Slow Start und eine Congestion Avoidance aber nach der Fast Retransmit Phase wird die 
+Übertragunsrate nicht so stark reduziert wie bei Tahoe, sie wird zuerst halbiert und dann erst linear erhöht.
+
+TCP Vegas:
+
+TCP Vegas ist eine Weiterentwicklung von TCP die auf genauere Staukontrolle abziehlt indem siedie Round-Trip-Time
+analysiert. Der Rate-Based Mechanism überwacht und passt die Übergangsrate basierend auf der Differenz zwischen erwarteter
+und tatsächlicher RTT an. Die Preemptive Congestion Avoidance ermittelt Stausituationen frühzeitig und passt die Übertragungsrate
+Proaktiv an, um verluste zu vermeiden.
+
+Liste der Protokolle und deren ISO/OSI-Schicht:
+
+TCP: Schicht 4, da es eine zuverlässige verbindungsorientierte Datenübertragung zwischen Endgeräten bietet.
+
+UDP: Schicht 4, UDP ist eine unzuverlässige verbindungslose Datenübertragung, ist aber schneller als TCP.
+
+IP: Schicht 3, die IP kümmert sich um die Adressierung und Weiterleitung von Paketen über Netzwerke hinweg.
+
+ICMP: Schicht 3, dient zur Fehler und Statusmeldung im Netzwerkbetrieb.
+
+ARP: Schicht 2, ARP überseztt IP-Adressen in MAC-Adresseb, die für die Datenübertragung auf der Sicherungsschicht benötigt werden.

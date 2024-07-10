@@ -1,0 +1,23 @@
+a)
+Nmap done: 256 IP addresses (0 hosts up) scanned in 207.01 seconds
+
+b)
+scanme.nmap.org benutzt Linux 4.15-.19.
+
+c)
+
+d)
+mit nmap -p 1-65535 -T4 -A -v 192.168.1.0/24. 
+
+e)
+Ein SYN Scan ist eine schnelle undunauffällige Methode um offene TCP Ports zu finden:
+nmap -sS 192.168.1.0/24, mit diem command sendet der scanner ein SYN Packet und wartet auf eine Antwort. 
+Der sender sendet kein ACK wodurch die Verbindung nie vollständig etabliert wird. Dies macht den SYN Scan schneller und
+schwerer zu erkennen.
+
+f)
+Port 80: Webserver
+Port 443: Sicherer Webserver
+Port 22: Sichere Shell
+Port 21: DateintransferProtokoll
+Port 25: E-Mail-Versand

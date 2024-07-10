@@ -1,0 +1,12 @@
+Wie man an die DHCP empfängt:
+Zuerst führt man den ipconfig /renew command in CMD aus, dann setzt man in Wireshark den UDP Port auf 68.
+Somit werden nur DHCP Pakete empfangen.
+
+Beobachtungen/Beschreibungen:
+Das DHCP Request Paket wird vom Client gesendet und die angebotene IP-Adresse anzufodern und zu bestätigen. Der Client
+akzeptiert damit das Angebot des Servers.
+
+DHCP ACK:
+Das DHCP Paket wird vom Server als Bestätigung auf das Request-Paket gesendet. Es teilt dem Client mit, dass er die 
+angeforderte IP-Adresse verwenden kann und enthält die entgültigen KOnfugurationsparameter.
+
